@@ -1,7 +1,8 @@
 class Airport():
-    def __init__(self):
+    DEFAULT_CAPACITY = 8
+    def __init__(self, capacity=DEFAULT_CAPACITY):
         self.hangar = []
-        self.capacity = 5
+        self.capacity = capacity
 
     def land(self, plane):
         if len(self.hangar) >= self.capacity:

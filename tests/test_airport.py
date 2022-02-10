@@ -29,3 +29,10 @@ class TestAirport():
             airport.hangar = [Plane() for num in range(airport.capacity)]
             plane = Plane()
             airport.land(plane)
+    
+    def test_custom_default_capacity(self):
+        airport1 = Airport(3)
+        assert airport1.capacity == 3
+
+        airport2 = Airport(17)
+        assert airport2.capacity == 17
