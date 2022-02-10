@@ -7,5 +7,12 @@ class Plane():
         airport.hangar.append(self)
         self.ground()
     
+    def take_off(self, airport):
+        airport.hangar.remove(self)
+        self.fly()
+    
     def ground(self):
         self.airborne = False
+    
+    def fly(self):
+        self.airborne = True

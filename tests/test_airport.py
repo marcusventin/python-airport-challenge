@@ -12,3 +12,10 @@ class TestAirport():
         assert plane not in airport.hangar
         airport.land(plane)
         assert plane in airport.hangar
+    
+    def test_launch_removes_plane_from_hangar(self):
+        airport = Airport()
+        plane = Plane()
+        airport.hangar = [plane]
+        airport.launch(plane)
+        assert plane not in airport.hangar
