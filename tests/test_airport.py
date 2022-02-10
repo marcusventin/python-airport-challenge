@@ -1,3 +1,5 @@
+import pytest
+
 from airport import Airport
 from plane import Plane
 
@@ -19,3 +21,11 @@ class TestAirport():
         airport.hangar = [plane]
         airport.launch(plane)
         assert plane not in airport.hangar
+    
+    def test_land_raises_error_when_hangar_full(self):
+        with pytest.raises(OverflowError, 
+            match="There's no space in this hangar"):
+            airport = Airport()
+            airport.hangar = [Plane() for num in range(airport.capacity)]
+            plane = Plane()
+            airport.land(plane)
