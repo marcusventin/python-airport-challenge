@@ -48,11 +48,12 @@ Airports can instruct airborne planes to land and grounded planes to take off. A
 ## How to Use
 #### Set-Up
 1. Fork this repository and clone it to your machine.
-2. Run `python3` to initialise your REPL.
-3. Enter `from airport import Airport` to load the airport class.
-4. Enter `from plane import Plane` to load the airport class.
-5. Enter `from weather import Weather` to load the weather class.
-6. Play to your heart's content using the commands listed below.
+2. Check there are no problems with the code by running `pipenv shell` in your terminal to set up a virtual environment, followed by `pytest` - all being well, the tests will pass.
+3. Run `python3` to initialise your REPL.
+4. Enter `from airport import Airport` to load the airport class.
+5. Enter `from plane import Plane` to load the airport class.
+6. Enter `from weather import Weather` to load the weather class.
+7. Play to your heart's content using the commands listed below.
 
 #### Airport Methods
 `NAME = Airport(optional maximum capacity)` - creates a new Airport object and set a custom maximum capacity - the default is currently set to 8.  
