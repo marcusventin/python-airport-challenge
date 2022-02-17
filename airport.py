@@ -8,6 +8,10 @@ class Airport():
         self.capacity = capacity
 
     def land(self, plane):
+        if plane in self.hangar:
+            raise Exception("This plane is already in this airport!")
+        if plane.airborne == False:
+            raise Exception("Your plane is in another airport!")
         if self.weather_check() == True:
             raise Exception("It's too stormy to land!")
         if len(self.hangar) >= self.capacity:
@@ -16,6 +20,10 @@ class Airport():
             plane.land(self)
     
     def launch(self, plane):
+        if plane not in self.hangar:
+            raise Exception("Your plane is in another airport!")
+        if plane.airborne:
+            raise Exception("This plane has already taken off!")
         if self.weather_check() == True:
             raise Exception("It's too stormy to launch!")
         plane.take_off(self)

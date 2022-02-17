@@ -23,6 +23,7 @@ class TestAirport():
         mocked_weather_check.return_value = False
         airport = Airport()
         plane = Plane()
+        plane.airborne = False
         airport.hangar = [plane]
         airport.launch(plane)
         assert plane not in airport.hangar
@@ -51,6 +52,7 @@ class TestAirport():
             match="It's too stormy to launch!"):
             airport = Airport()
             plane = Plane()
+            plane.airborne = False
             airport.hangar = [plane]
             airport.launch(plane)
     
