@@ -45,7 +45,8 @@ The project enables a user to simulate basic airport / airplane interactions. It
 ## Features
 Airports can instruct airborne planes to land and grounded planes to take off. A random stormy weather variable keeps budding air traffic controllers on their toes though!
 
-## Set-Up
+## How to Use
+#### Set-Up
 1. Fork this repository and clone it to your machine.
 2. Run `python3` to initialise your REPL.
 3. Enter `from airport import Airport` to load the airport class.
@@ -53,14 +54,13 @@ Airports can instruct airborne planes to land and grounded planes to take off. A
 5. Enter `from weather import Weather` to load the weather class.
 6. Play to your heart's content using the commands listed below.
 
-## How to Use
 #### Airport Methods
-`NAME = Airport(optional maximum capacity)` - create a new Airport object and set a custom maximum capacity - the default is currently set at 8.  
+`NAME = Airport(optional maximum capacity)` - creates a new Airport object and set a custom maximum capacity - the default is currently set to 8.  
 `.land(plane)` - lands an object of the Plane class and stores it in the airport's hangar.  
 `.launch(plane)` - launches an object of the Plane class and removes it from the airport's hangar.  
 
 #### Plane Methods
-`NAME = Plane()` - create a new Plane object.  
+`NAME = Plane()` - creates a new Plane object.  
 `.land(airport)` - adds the plane to an airport's hangar, and calls the `.ground()` function to update its status.  
 `.take_off(airport)` - removes the plane from an airport's hangar, and calls the `.fly()` function to update its status.  
 `.ground()` - updates the plane's status to show it is on the ground.
