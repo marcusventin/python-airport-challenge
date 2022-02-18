@@ -14,7 +14,7 @@ Airport Challenge
 ```
 
 ## Motivation
-This project was originally completed using [Ruby](https://github.com/marcusventin/airport_challenge). I have repeated in order to gain experience using Python.  
+This project was originally completed using [Ruby](https://github.com/marcusventin/airport_challenge). I have repeated it in order to gain experience using Python.  
 
 The project enables a user to simulate basic airport / airplane interactions. It is intended to satisfy the following user stories:
 
